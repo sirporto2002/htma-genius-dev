@@ -1,12 +1,8 @@
+// /vite.config.ts  (ROOT) — replace ENTIRE file with this
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { resolve } from "path";
 
 export default defineConfig({
   plugins: [react()],
-  resolve: {
-    alias: {
-      "@": resolve(__dirname, "src"), // enables imports like "@/features/..."
-    },
-  },
+  // Leave `base` undefined for local dev
 });
